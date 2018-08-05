@@ -1,0 +1,23 @@
+version: '3'
+
+services:
+  api:
+    build:
+      context: .
+    container_name: app-jupiter-bank
+    ports:
+    - 8000:8080
+    depends_on:
+    - db
+    environment:
+      JAVA_ENV: dev
+
+  db:
+    image: mysql:latest
+    container_name: db-jupiter-bank
+    ports:
+    - 3306:3306
+    environment:
+    - MYSQL_DATABASE=jupiter
+    - MYSQL_ROOT_PASSWORD=root
+    - MYSQL_PASSWORD=root

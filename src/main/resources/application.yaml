@@ -1,0 +1,11 @@
+spring:
+  profiles: dev
+  application:
+    name: jupiter-bank
+  datasource:
+    url: jdbc:mysql://db:3306/jupiter
+    username: root
+    password: root
+    driver-class-name: com.mysql.jdbc.Driver
+  jpa:
+    hibernate.ddl-auto: update

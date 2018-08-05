@@ -1,4 +1,4 @@
-.gradle
+git remote add origin git@github.com:Jonss/jupiter-bankt.git.gradle
 /build/
 !gradle/wrapper/gradle-wrapper.jar
 
@@ -17,6 +17,7 @@
 *.iml
 *.ipr
 /out/
+.gradle/
 
 ### NetBeans ###
 /nbproject/private/

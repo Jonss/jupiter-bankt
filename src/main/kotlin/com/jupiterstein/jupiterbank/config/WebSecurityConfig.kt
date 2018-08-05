@@ -16,6 +16,7 @@ class WebSecurityConfig: WebSecurityConfigurerAdapter() {
         http.csrf().disable().authorizeRequests()
                 .antMatchers("/hello").permitAll()
                 .antMatchers(HttpMethod.POST, "/login").permitAll()
+                .antMatchers(HttpMethod.POST, "/signup").permitAll()
                 .anyRequest().authenticated()
                 .and()
                 .addFilterAt(JWTLoginFilter("/login", authenticationManager()),
